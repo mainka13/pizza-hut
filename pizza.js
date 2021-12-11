@@ -64,7 +64,7 @@ let userItem = document.querySelector(".user3");
 
 window.addEventListener("DOMContentLoaded", function(){
 let Info = info.map(function(item){
-    return `<div class="user-item col-md-4 col-sm-12">
+    return `<div class="user-item col-lg-3 col-md-6 col-sm-12">
     <div class="user-item1">
     <p class="p1 py-5" id="text">${item.desc}</p>
     </div>
@@ -116,5 +116,24 @@ userItem.innerHTML = Info;
 
 // console.log(carousel);
 
+
+//left menu
+
+let myMenu = document.getElementById("mymenu");
+
+myMenu.addEventListener("click", function(){
+    document.querySelector(".left-menu").style.width = "300px";
+    myMenu.style.display = "none";
+    crossBtn.style.display = "block";
+    
+})
+
+let crossBtn = document.getElementById("crossBtn");
+
+crossBtn.addEventListener("click", function(){
+    document.querySelector(".left-menu").style.width = "0px";
+    crossBtn.style.display = "none";
+    myMenu.style.display = "block";
+})
 
 
